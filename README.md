@@ -128,3 +128,8 @@ Admin view:
 ### Arabic (RTL) Layout
 
 ![Arabic RTL layout](screenshots/arabic-rtl-layout.png)
+
+
+## Notes
+
+This is **Version 2** of ShopsApp, part of a multi-version project. **Version 1** — a plain PHP/jQuery/MySQL app with session-based auth and no roles or translations — exists as an earlier, simpler iteration of the same idea. Possible directions for a future version include PWA support (offline access, installability), though this is not yet in progress in this codebase.
