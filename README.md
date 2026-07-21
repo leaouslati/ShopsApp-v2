@@ -87,6 +87,10 @@ The app will be available at `http://localhost:4200`.
 - **Admins only** (role `admin`) see extra controls on the home product grid to **add, edit, or delete products**, including uploading a product image. Regular users (role `user`) don't see these controls, and attempting the underlying API calls directly is rejected server-side by the `ProductPolicy`.
 - Use the nav bar to **switch language** (English/Arabic, with automatic RTL layout) and adjust font size.
 
+## Notes
+
+This is **Version 2** of ShopsApp, part of a multi-version project. **Version 1** — a plain PHP/jQuery/MySQL app with session-based auth and no roles or translations — exists as an earlier, simpler iteration of the same idea. Possible directions for a future version include PWA support (offline access, installability), though this is not yet in progress in this codebase.
+
 ## Screenshots
 
 ### Home Page
