@@ -1,0 +1,39 @@
+<app-nav-bar [title]="'NAVBAR.ECOMMERCE'"/>
+<a routerLink="/" class="back-btn">← {{ 'ECOMMERCE.BACK' | translate }}</a>
+<div class="ecomm-wrapper">
+    <section id="products" class="ecomm-products">
+        <div class="cards">
+            @for(product of productService.products(); track product.id){
+                <app-ecommerce-product-card [product]="product" (orderChange)="handleOrderChange($event)"></app-ecommerce-product-card>
+            }
+        </div>
+    </section>
+
+    <section class="ecomm-summary">
+        <h2>{{ 'ECOMMERCE.SUMMARY' | translate }}</h2>
+        <table class="summary-table">
+            <thead>
+                <tr>
+                    <th colspan="3">{{ 'ECOMMERCE.PRODUCTS' | translate }}</th>
+                </tr>
+            </thead>
+            <tbody id="summary-body">
+                @for(order of cart();track order.product.id){
+                  <tr>
+                    <td>{{order.product.title}}</td>
+                    <td>{{order.quantity}}</td>
+                    <td>${{(order.quantity*order.product.price).toFixed(2)}}</td>
+                  </tr>
+                }
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>{{ 'ECOMMERCE.TOTAL' | translate }}</td>
+                    <td id="total-qty">{{totalQty()}}</td>
+                    <td id="total-price">${{totalPrice().toFixed(2)}}</td>
+                </tr>
+            </tfoot>
+        </table>
+        <button class="checkout-btn">{{ 'ECOMMERCE.CHECKOUT' | translate }}</button>
+    </section>
+</div>

@@ -1,0 +1,35 @@
+<header>
+    <div class="top-bar">
+        <div class="top-left">
+            <a routerLink="/" class="logo-link">
+                <div class="logo"></div>
+            </a>
+            <button class="lang-btn" (click)="switchLanguage('en')">EN</button>
+            <span class="seperator"> | </span>
+            <button class="lang-btn" (click)="switchLanguage('ar')">AR</button>
+        </div>
+
+
+        <div class="top-right">
+            <span class="font-ctrl" id="increase-font" (click)="increaseFont()">A+</span>
+            <span class="font-ctrl" id="decrease-font" (click)="decreaseFont()">A-</span>
+            @if (title()==='NAVBAR.HOME') {
+            <button class="hamburger" id="hamburger" (click)="toggleMenu()">&#9776;</button>
+            }
+            @if (auth.isLoggedIn()) {
+            <button class="auth-btn" (click)="openLogoutDialog()">{{ 'NAVBAR.LOGOUT' | translate }}</button>
+            } @else {
+            <button class="auth-btn" (click)="openLoginDialog()">{{ 'NAVBAR.LOGIN' | translate }}</button>
+            }
+        </div>
+    </div>
+
+    @if (title()==='NAVBAR.HOME') {
+    <nav class="navbar" [class.open]="menuOpen()">
+        <a href="#slider">{{ 'NAVBAR.PRODUCTS' | translate }}</a>
+        <a href="#contact">{{ 'NAVBAR.CONTACT' | translate }}</a>
+        <a href="#follow">{{ 'NAVBAR.FOLLOW_US' | translate }}</a>
+        <a (click)="goToEcommerce()">{{ 'NAVBAR.ECOMMERCE' | translate }}</a>
+    </nav>
+    }
+</header>

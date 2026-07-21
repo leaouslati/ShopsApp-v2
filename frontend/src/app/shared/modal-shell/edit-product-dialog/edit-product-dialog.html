@@ -1,0 +1,67 @@
+<div class="dialog-header">
+  <h2 mat-dialog-title>{{ 'EDIT_PRODUCT.TITLE' | translate }}</h2>
+  <button class="close-btn" (click)="dialogRef.close()">✕</button>
+</div>
+
+<mat-dialog-content>
+  <form [formGroup]="editProductForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="title">{{ 'EDIT_PRODUCT.TITLE_LABEL' | translate }}</label>
+      <input type="text" id="title" formControlName="title"
+        [class.input-error]="editProductForm.controls.title.invalid && editProductForm.controls.title.touched" />
+      @if (editProductForm.controls.title.touched && editProductForm.controls.title.errors?.['required']) {
+      <span class="error">{{ 'EDIT_PRODUCT.TITLE_REQUIRED' | translate }}</span>
+      }
+    </div>
+
+    <div class="form-group">
+      <label for="description">{{ 'EDIT_PRODUCT.DESCRIPTION_LABEL' | translate }}</label>
+      <textarea id="description" formControlName="description"
+        [class.input-error]="editProductForm.controls.description.invalid && editProductForm.controls.description.touched"></textarea>
+      @if (editProductForm.controls.description.touched && editProductForm.controls.description.errors?.['required']) {
+      <span class="error">{{ 'EDIT_PRODUCT.DESCRIPTION_REQUIRED' | translate }}</span>
+      }
+    </div>
+
+    <div class="form-group">
+      <label for="price">{{ 'EDIT_PRODUCT.PRICE_LABEL' | translate }}</label>
+      <input type="number" id="price" formControlName="price"
+        [class.input-error]="editProductForm.controls.price.invalid && editProductForm.controls.price.touched" />
+      @if (editProductForm.controls.price.touched && editProductForm.controls.price.errors?.['required']) {
+      <span class="error">{{ 'EDIT_PRODUCT.PRICE_REQUIRED' | translate }}</span>
+      }
+      @if (editProductForm.controls.price.touched && editProductForm.controls.price.errors?.['min']) {
+      <span class="error">{{ 'EDIT_PRODUCT.PRICE_MIN' | translate }}</span>
+      }
+    </div>
+
+    <div class="form-group">
+      <div class="image-label-row">
+        <label for="image">{{ 'EDIT_PRODUCT.IMAGE_LABEL' | translate }}</label>
+        <button type="button" class="edit-image-link" (click)="fileInput.click()">
+          {{ 'EDIT_PRODUCT.IMAGE_EDIT' | translate }}
+        </button>
+      </div>
+      <input
+        #fileInput
+        type="file"
+        id="image"
+        class="file-input-hidden"
+        accept="image/*"
+        (change)="onFileSelected($event)"
+      />
+      <div class="image-preview-wrapper">
+        <img [src]="previewUrl() ?? product.image_path" alt="product image" class="current-image-preview">
+        <button type="button" class="zoom-icon-btn" (click)="onZoomImage()">+ Zoom</button>
+      </div>
+    </div>
+
+    @if (editProductError()) {
+    <p class="error">{{ editProductError() }}</p>
+    }
+
+    <button type="submit" class="btn" [disabled]="isLoading()">
+      {{ isLoading() ? ('EDIT_PRODUCT.SUBMITTING' | translate) : ('EDIT_PRODUCT.SUBMIT' | translate) }}
+    </button>
+  </form>
+</mat-dialog-content>

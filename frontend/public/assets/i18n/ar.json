@@ -1,0 +1,130 @@
+{
+  "NAVBAR": {
+    "HOME": "الرئيسية",
+    "PRODUCTS": "المنتجات",
+    "CONTACT": "تواصل معنا",
+    "FOLLOW_US": "تابعنا",
+    "ECOMMERCE": "التجارة الإلكترونية",
+    "LOGIN": "تسجيل الدخول",
+    "LOGOUT": "تسجيل الخروج",
+    "PRODUCT_DETAIL": "تفاصيل المنتج"
+  },
+  "LOGIN": {
+    "TITLE": "تسجيل الدخول",
+    "EMAIL_LABEL": "البريد الإلكتروني:",
+    "EMAIL_PLACEHOLDER": "أدخل بريدك الإلكتروني",
+    "EMAIL_REQUIRED": "البريد الإلكتروني مطلوب",
+    "EMAIL_INVALID": "صيغة البريد الإلكتروني غير صحيحة",
+    "PASSWORD_LABEL": "كلمة المرور:",
+    "PASSWORD_PLACEHOLDER": "أدخل كلمة المرور",
+    "PASSWORD_REQUIRED": "كلمة المرور مطلوبة",
+    "SUBMIT": "تسجيل الدخول",
+    "SUBMITTING": "جارٍ تسجيل الدخول...",
+    "NO_ACCOUNT": "ليس لديك حساب؟",
+    "SIGN_UP": "إنشاء حساب",
+    "INVALID_CREDENTIALS": "بيانات الدخول غير صحيحة"
+  },
+  "REGISTER": {
+    "TITLE": "إنشاء حساب",
+    "FIRST_NAME_LABEL": "الاسم الأول:",
+    "FIRST_NAME_PLACEHOLDER": "الاسم الأول",
+    "FIRST_NAME_REQUIRED": "الاسم الأول مطلوب",
+    "LAST_NAME_LABEL": "الاسم الأخير:",
+    "LAST_NAME_PLACEHOLDER": "الاسم الأخير",
+    "LAST_NAME_REQUIRED": "الاسم الأخير مطلوب",
+    "EMAIL_LABEL": "البريد الإلكتروني:",
+    "EMAIL_REQUIRED": "البريد الإلكتروني مطلوب",
+    "EMAIL_INVALID": "صيغة البريد الإلكتروني غير صحيحة",
+    "PASSWORD_LABEL": "كلمة المرور:",
+    "PASSWORD_PLACEHOLDER": "أدخل كلمة المرور",
+    "PASSWORD_REQUIRED": "كلمة المرور مطلوبة",
+    "PASSWORD_MIN_LENGTH": "يجب أن تكون كلمة المرور 8 أحرف على الأقل",
+    "CONFIRM_PASSWORD_LABEL": "تأكيد كلمة المرور:",
+    "CONFIRM_PASSWORD_PLACEHOLDER": "أعد إدخال كلمة المرور",
+    "CONFIRM_PASSWORD_REQUIRED": "يرجى تأكيد كلمة المرور",
+    "PASSWORDS_MISMATCH": "كلمتا المرور غير متطابقتين",
+    "SUBMIT": "إنشاء حساب",
+    "SUBMITTING": "جارٍ إنشاء الحساب...",
+    "ALREADY_ACCOUNT": "هل لديك حساب بالفعل؟",
+    "LOGIN_LINK": "تسجيل الدخول",
+    "EMAIL_ALREADY_REGISTERED": "البريد الإلكتروني مسجل مسبقاً"
+  },
+  "LOGOUT": {
+    "TITLE": "تسجيل الخروج",
+    "CONFIRM_TEXT": "هل أنت متأكد من تسجيل الخروج؟",
+    "CANCEL": "إلغاء",
+    "SUBMIT": "تسجيل الخروج",
+    "SUBMITTING": "جارٍ تسجيل الخروج..."
+  },
+  "ADD_PRODUCT": {
+    "TITLE": "إضافة منتج",
+    "TITLE_LABEL": "العنوان",
+    "TITLE_PLACEHOLDER": "أدخل عنوان المنتج",
+    "TITLE_REQUIRED": "العنوان مطلوب",
+    "DESCRIPTION_LABEL": "الوصف",
+    "DESCRIPTION_PLACEHOLDER": "اكتب وصف المنتج...",
+    "DESCRIPTION_REQUIRED": "الوصف مطلوب",
+    "PRICE_LABEL": "السعر",
+    "PRICE_REQUIRED": "السعر مطلوب",
+    "PRICE_NEGATIVE": "لا يمكن أن يكون السعر بالسالب",
+    "IMAGE_LABEL": "الصورة",
+    "IMAGE_CHOOSE": "اضغط لاختيار صورة",
+    "IMAGE_REQUIRED": "الصورة مطلوبة",
+    "SUBMIT": "إضافة منتج",
+    "SUBMITTING": "جارٍ الإضافة...",
+    "FAILED": "فشل في إضافة المنتج"
+  },
+  "EDIT_PRODUCT": {
+    "TITLE": "تعديل المنتج",
+    "TITLE_LABEL": "العنوان",
+    "TITLE_REQUIRED": "العنوان مطلوب",
+    "DESCRIPTION_LABEL": "الوصف",
+    "DESCRIPTION_REQUIRED": "الوصف مطلوب",
+    "PRICE_LABEL": "السعر",
+    "PRICE_REQUIRED": "السعر مطلوب",
+    "PRICE_MIN": "يجب أن يكون السعر أكبر من الصفر",
+    "IMAGE_LABEL": "الصورة",
+    "IMAGE_EDIT": "تعديل",
+    "IMAGE_CHOOSE_NEW": "اختر صورة جديدة (اختياري)",
+    "SUBMIT": "حفظ التغييرات",
+    "SUBMITTING": "جارٍ الحفظ...",
+    "FAILED": "فشل في تحديث المنتج"
+  },
+  "DELETE_PRODUCT": {
+    "TITLE": "حذف المنتج",
+    "CONFIRM_BEFORE": "هل أنت متأكد من حذف ",
+    "CONFIRM_AFTER": "؟",
+    "CANCEL": "إلغاء",
+    "SUBMIT": "حذف",
+    "SUBMITTING": "جارٍ الحذف...",
+    "FAILED": "فشل في حذف المنتج"
+  },
+  "HOME": {
+    "CONTACT_US": "تواصل معنا",
+    "FOLLOW_US": "تابعنا"
+  },
+  "PRODUCT_DETAIL": {
+    "BACK": "رجوع",
+    "PRICE": "السعر:"
+  },
+  "ECOMMERCE": {
+    "BACK": "رجوع",
+    "SUMMARY": "ملخص الطلب",
+    "PRODUCTS": "المنتجات",
+    "TOTAL": "الإجمالي",
+    "CHECKOUT": "إتمام الشراء"
+  },
+  "STORE_MAP": {
+    "STORES": {
+      "BEIRUT_TECH_STORE": "متجر بيروت للتكنولوجيا",
+      "TRIPOLI_POS_CENTER": "مركز طرابلس لنقاط البيع",
+      "SIDON_SMART_STORE": "المتجر الذكي في صيدا",
+      "BYBLOS_DIGITAL_SHOP": "المحل الرقمي في جبيل",
+      "JOUNIEH_PAY_HUB": "مركز الدفع في جونية",
+      "ZAHLEH_TECH_POINT": "نقطة التقنية في زحلة",
+      "TYRE_POS_CENTER": "مركز نقاط البيع في صور",
+      "BAALBEK_TECH_HUB": "المركز التقني في بعلبك",
+      "DAMOUR_PAY_POINT": "نقطة الدفع في الدامور"
+    }
+  }
+}

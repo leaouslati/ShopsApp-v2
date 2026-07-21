@@ -1,0 +1,53 @@
+<div class="dialog-header">
+  <h2 mat-dialog-title>{{ 'LOGIN.TITLE' | translate }}</h2>
+  <button class="close-btn" (click)="dialogRef.close()">✕</button>
+</div>
+
+<mat-dialog-content>
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="email">{{ 'LOGIN.EMAIL_LABEL' | translate }}</label>
+      <input
+        type="email"
+        id="email"
+        formControlName="email"
+        placeholder="✉ your@email.com"
+        autocomplete="off"
+        [class.input-error]="loginForm.controls.email.invalid && loginForm.controls.email.touched"
+      />
+      @if (loginForm.controls.email.touched && loginForm.controls.email.errors?.['required']) {
+        <span class="error">{{ 'LOGIN.EMAIL_REQUIRED' | translate }}</span>
+      }
+      @if (loginForm.controls.email.touched && loginForm.controls.email.errors?.['email']) {
+        <span class="error">{{ 'LOGIN.EMAIL_INVALID' | translate }}</span>
+      }
+    </div>
+
+    <div class="form-group">
+      <label for="password">{{ 'LOGIN.PASSWORD_LABEL' | translate }}</label>
+      <input
+        type="password"
+        id="password"
+        formControlName="password"
+        [placeholder]="'🔒︎ ' + ('LOGIN.PASSWORD_PLACEHOLDER' | translate)"
+        [class.input-error]="loginForm.controls.password.invalid && loginForm.controls.password.touched"
+      />
+      @if (loginForm.controls.password.touched && loginForm.controls.password.errors?.['required']) {
+        <span class="error">{{ 'LOGIN.PASSWORD_REQUIRED' | translate }}</span>
+      }
+    </div>
+
+    @if (loginError()) {
+      <p class="error">{{ loginError() }}</p>
+    }
+
+    <button type="submit" class="btn" [disabled]="isLoading()">
+      {{ isLoading() ? ('LOGIN.SUBMITTING' | translate) : ('LOGIN.SUBMIT' | translate) }}
+    </button>
+
+    <p class="signup-prompt">
+      {{ 'LOGIN.NO_ACCOUNT' | translate }}
+      <a (click)="openRegister()">{{ 'LOGIN.SIGN_UP' | translate }}</a>
+    </p>
+  </form>
+</mat-dialog-content>

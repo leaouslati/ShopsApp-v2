@@ -1,0 +1,21 @@
+@if(auth.isAdmin()){
+ <button class="add-btn" (click)="showAddProductModal()">＋</button>}
+<div class="products-grid">
+    @for(product of productService.products(); track product.id){
+    <div class="product-card" (click)="navigateToProduct(product)">
+        <img class="product-img" [src]="product.image_path" [alt]="product.title">
+        <h4>
+            {{product.title}}
+        </h4>
+        <p>
+            {{product.description}}
+        </p>
+        @if(auth.isAdmin()){
+        <div class="product-actions">
+            <button class="action-btn edit-btn" (click)="$event.stopPropagation(); openEditDialog(product)">✏</button>
+            <button class="action-btn delete-btn" (click)="$event.stopPropagation(); openDeleteDialog(product)">🗑︎</button>
+        </div>
+        }
+    </div>
+    }
+</div>

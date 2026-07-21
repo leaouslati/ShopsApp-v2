@@ -1,0 +1,101 @@
+<div class="dialog-header">
+  <h2 mat-dialog-title>{{ 'REGISTER.TITLE' | translate }}</h2>
+  <button class="close-btn" (click)="dialogRef.close()">✕</button>
+</div>
+
+<mat-dialog-content>
+  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="first_name">{{ 'REGISTER.FIRST_NAME_LABEL' | translate }}</label>
+      <input
+        type="text"
+        id="first_name"
+        formControlName="firstName"
+        [placeholder]="'REGISTER.FIRST_NAME_PLACEHOLDER' | translate"
+        [class.input-error]="registerForm.controls.firstName.invalid && registerForm.controls.firstName.touched"
+      />
+      @if (registerForm.controls.firstName.touched && registerForm.controls.firstName.errors?.['required']) {
+        <span class="error">{{ 'REGISTER.FIRST_NAME_REQUIRED' | translate }}</span>
+      }
+    </div>
+
+    <div class="form-group">
+      <label for="last_name">{{ 'REGISTER.LAST_NAME_LABEL' | translate }}</label>
+      <input
+        type="text"
+        id="last_name"
+        formControlName="lastName"
+        [placeholder]="'REGISTER.LAST_NAME_PLACEHOLDER' | translate"
+        [class.input-error]="registerForm.controls.lastName.invalid && registerForm.controls.lastName.touched"
+      />
+      @if (registerForm.controls.lastName.touched && registerForm.controls.lastName.errors?.['required']) {
+        <span class="error">{{ 'REGISTER.LAST_NAME_REQUIRED' | translate }}</span>
+      }
+    </div>
+
+    <div class="form-group">
+      <label for="email">{{ 'REGISTER.EMAIL_LABEL' | translate }}</label>
+      <input
+        type="email"
+        id="email"
+        formControlName="email"
+        placeholder="✉ your@email.com"
+        autocomplete="off"
+        [class.input-error]="registerForm.controls.email.invalid && registerForm.controls.email.touched"
+      />
+      @if (registerForm.controls.email.touched && registerForm.controls.email.errors?.['required']) {
+        <span class="error">{{ 'REGISTER.EMAIL_REQUIRED' | translate }}</span>
+      }
+      @if (registerForm.controls.email.touched && registerForm.controls.email.errors?.['email']) {
+        <span class="error">{{ 'REGISTER.EMAIL_INVALID' | translate }}</span>
+      }
+    </div>
+
+    <div class="form-group">
+      <label for="password">{{ 'REGISTER.PASSWORD_LABEL' | translate }}</label>
+      <input
+        type="password"
+        id="password"
+        formControlName="password"
+        [placeholder]="'🔒︎ ' + ('REGISTER.PASSWORD_PLACEHOLDER' | translate)"
+        [class.input-error]="registerForm.controls.password.invalid && registerForm.controls.password.touched"
+      />
+      @if (registerForm.controls.password.touched && registerForm.controls.password.errors?.['required']) {
+        <span class="error">{{ 'REGISTER.PASSWORD_REQUIRED' | translate }}</span>
+      }
+      @if (registerForm.controls.password.touched && registerForm.controls.password.errors?.['minlength']) {
+        <span class="error">{{ 'REGISTER.PASSWORD_MIN_LENGTH' | translate }}</span>
+      }
+    </div>
+
+    <div class="form-group">
+      <label for="confirm_password">{{ 'REGISTER.CONFIRM_PASSWORD_LABEL' | translate }}</label>
+      <input
+        type="password"
+        id="confirm_password"
+        formControlName="confirmPassword"
+        [placeholder]="'🔒︎ ' + ('REGISTER.CONFIRM_PASSWORD_PLACEHOLDER' | translate)"
+        [class.input-error]="registerForm.controls.confirmPassword.touched && registerForm.errors?.['passwordMismatch']"
+      />
+      @if (registerForm.controls.confirmPassword.touched && registerForm.controls.confirmPassword.errors?.['required']) {
+        <span class="error">{{ 'REGISTER.CONFIRM_PASSWORD_REQUIRED' | translate }}</span>
+      }
+      @if (registerForm.controls.confirmPassword.touched && registerForm.errors?.['passwordMismatch']) {
+        <span class="error">{{ 'REGISTER.PASSWORDS_MISMATCH' | translate }}</span>
+      }
+    </div>
+
+    @if (registerError()) {
+      <p class="error">{{ registerError() }}</p>
+    }
+
+    <button type="submit" class="btn" [disabled]="isLoading()">
+      {{ isLoading() ? ('REGISTER.SUBMITTING' | translate) : ('REGISTER.SUBMIT' | translate) }}
+    </button>
+
+    <p class="signup-prompt">
+      {{ 'REGISTER.ALREADY_ACCOUNT' | translate }}
+      <a (click)="openLogin()">{{ 'REGISTER.LOGIN_LINK' | translate }}</a>
+    </p>
+  </form>
+</mat-dialog-content>

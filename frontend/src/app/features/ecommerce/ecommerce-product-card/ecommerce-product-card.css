@@ -1,0 +1,75 @@
+:host {
+    display: block;
+}
+
+.ecomm-card {
+    background-color: #ffffff;
+    border: 1px solid #2C3E50;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.ecomm-card img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    background-color: #EBF0F5;
+    border-radius: 4px;
+    padding: 8px;
+    margin-bottom: 5px;
+}
+
+.qty-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+}
+
+.qty-input {
+    width: 50px;
+    text-align: center;
+    padding: 4px;
+    border: 1px solid #2C3E50;
+    border-radius: 4px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.85rem;
+}
+
+.qty-btn-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+
+.qty-plus,
+.qty-minus {
+    font-size: 1.2rem;
+    user-select: none;
+    color: #2C3E50;
+    font-weight: 500;
+}
+
+.qty-plus:hover,
+.qty-minus:hover {
+    opacity: 0.75;
+}
+
+.add-to-order {
+    position: absolute;
+    bottom: 0.75rem;
+    right: 0.75rem;
+    font-size: 1.3rem;
+    color: #2C3E50;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.add-to-order.checked {
+    color: green;
+}

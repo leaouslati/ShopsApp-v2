@@ -1,0 +1,46 @@
+<app-nav-bar [title]="'NAVBAR.HOME'"></app-nav-bar>
+<section id="slider">
+    <app-slider />
+</section>
+<hr class="section-divider">
+
+<div class="sections-wrapper">
+    <section id="contact">
+        <h2>{{ 'HOME.CONTACT_US' | translate }}</h2>
+        <app-store-map />
+    </section>
+    <section id="products">
+        <app-products-grid/>
+    </section>
+</div>
+
+<hr class="section-divider">
+<footer id="follow">
+    <h2>{{ 'HOME.FOLLOW_US' | translate }}</h2>
+    <div class="follow-cards">
+        <div class="follow-item">
+            <a href="https://www.instagram.com" target="_blank" class="follow-card">
+                <img src="images/instagram.png" alt="Instagram">
+            </a>
+            <p>Instagram</p>
+        </div>
+        <div class="follow-item">
+            <a href="https://www.x.com" target="_blank" class="follow-card">
+                <img src="images/X.png" alt="X">
+            </a>
+            <p>X</p>
+        </div>
+        <div class="follow-item">
+            <a href="https://www.linkedin.com" target="_blank" class="follow-card">
+                <img src="images/linkedin.png" alt="LinkedIn">
+            </a>
+            <p>LinkedIn</p>
+        </div>
+        <div class="follow-item">
+            <a href="https://www.facebook.com" target="_blank" class="follow-card">
+                <img src="images/facebook.png" alt="Facebook">
+            </a>
+            <p>Facebook</p>
+        </div>
+    </div>
+</footer>

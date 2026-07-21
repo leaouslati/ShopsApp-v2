@@ -1,0 +1,130 @@
+{
+  "NAVBAR": {
+    "HOME": "Home",
+    "PRODUCTS": "Products",
+    "CONTACT": "Contact",
+    "FOLLOW_US": "Follow Us",
+    "ECOMMERCE": "Ecommerce",
+    "LOGIN": "Login",
+    "LOGOUT": "Logout",
+    "PRODUCT_DETAIL": "Product Detail"
+  },
+  "LOGIN": {
+    "TITLE": "Login",
+    "EMAIL_LABEL": "Email:",
+    "EMAIL_PLACEHOLDER": "Enter your email",
+    "EMAIL_REQUIRED": "Email is required",
+    "EMAIL_INVALID": "Invalid email format",
+    "PASSWORD_LABEL": "Password:",
+    "PASSWORD_PLACEHOLDER": "Enter your password",
+    "PASSWORD_REQUIRED": "Password is required",
+    "SUBMIT": "Login",
+    "SUBMITTING": "Logging in...",
+    "NO_ACCOUNT": "Don't have an account?",
+    "SIGN_UP": "Sign up",
+    "INVALID_CREDENTIALS": "Invalid Credentials"
+  },
+  "REGISTER": {
+    "TITLE": "Register",
+    "FIRST_NAME_LABEL": "First Name:",
+    "FIRST_NAME_PLACEHOLDER": "First name",
+    "FIRST_NAME_REQUIRED": "First name is required",
+    "LAST_NAME_LABEL": "Last Name:",
+    "LAST_NAME_PLACEHOLDER": "Last name",
+    "LAST_NAME_REQUIRED": "Last name is required",
+    "EMAIL_LABEL": "Email:",
+    "EMAIL_REQUIRED": "Email is required",
+    "EMAIL_INVALID": "Invalid email format",
+    "PASSWORD_LABEL": "Password:",
+    "PASSWORD_PLACEHOLDER": "Enter your password",
+    "PASSWORD_REQUIRED": "Password is required",
+    "PASSWORD_MIN_LENGTH": "Password must be at least 8 characters",
+    "CONFIRM_PASSWORD_LABEL": "Confirm Password:",
+    "CONFIRM_PASSWORD_PLACEHOLDER": "Re-enter your password",
+    "CONFIRM_PASSWORD_REQUIRED": "Please confirm your password",
+    "PASSWORDS_MISMATCH": "Passwords do not match",
+    "SUBMIT": "Register",
+    "SUBMITTING": "Registering...",
+    "ALREADY_ACCOUNT": "Already have an account?",
+    "LOGIN_LINK": "Login",
+    "EMAIL_ALREADY_REGISTERED": "Email is already registered"
+  },
+  "LOGOUT": {
+    "TITLE": "Logout",
+    "CONFIRM_TEXT": "Are you sure you want to logout?",
+    "CANCEL": "Cancel",
+    "SUBMIT": "Logout",
+    "SUBMITTING": "Logging out..."
+  },
+  "ADD_PRODUCT": {
+    "TITLE": "Add Product",
+    "TITLE_LABEL": "Title",
+    "TITLE_PLACEHOLDER": "Enter product title",
+    "TITLE_REQUIRED": "Title is required",
+    "DESCRIPTION_LABEL": "Description",
+    "DESCRIPTION_PLACEHOLDER": "Describe your product...",
+    "DESCRIPTION_REQUIRED": "Description is required",
+    "PRICE_LABEL": "Price",
+    "PRICE_REQUIRED": "Price is required",
+    "PRICE_NEGATIVE": "Price shouldn't be negative",
+    "IMAGE_LABEL": "Image",
+    "IMAGE_CHOOSE": "Click to choose an image",
+    "IMAGE_REQUIRED": "Image is required",
+    "SUBMIT": "Add Product",
+    "SUBMITTING": "Adding...",
+    "FAILED": "Failed to add product"
+  },
+  "EDIT_PRODUCT": {
+    "TITLE": "Edit Product",
+    "TITLE_LABEL": "Title",
+    "TITLE_REQUIRED": "Title is required",
+    "DESCRIPTION_LABEL": "Description",
+    "DESCRIPTION_REQUIRED": "Description is required",
+    "PRICE_LABEL": "Price",
+    "PRICE_REQUIRED": "Price is required",
+    "PRICE_MIN": "Price must be greater than 0",
+    "IMAGE_LABEL": "Image",
+    "IMAGE_EDIT": "Edit",
+    "IMAGE_CHOOSE_NEW": "Choose a new image (optional)",
+    "SUBMIT": "Save Changes",
+    "SUBMITTING": "Saving...",
+    "FAILED": "Failed to update product"
+  },
+  "DELETE_PRODUCT": {
+    "TITLE": "Delete Product",
+    "CONFIRM_BEFORE": "Are you sure you want to delete ",
+    "CONFIRM_AFTER": "?",
+    "CANCEL": "Cancel",
+    "SUBMIT": "Delete",
+    "SUBMITTING": "Deleting...",
+    "FAILED": "Failed to delete product"
+  },
+  "HOME": {
+    "CONTACT_US": "Contact Us",
+    "FOLLOW_US": "Follow us"
+  },
+  "PRODUCT_DETAIL": {
+    "BACK": "Back",
+    "PRICE": "Price:"
+  },
+  "ECOMMERCE": {
+    "BACK": "Back",
+    "SUMMARY": "Summary",
+    "PRODUCTS": "Products",
+    "TOTAL": "Total",
+    "CHECKOUT": "Checkout"
+  },
+  "STORE_MAP": {
+    "STORES": {
+      "BEIRUT_TECH_STORE": "Beirut Tech Store",
+      "TRIPOLI_POS_CENTER": "Tripoli POS Center",
+      "SIDON_SMART_STORE": "Sidon Smart Store",
+      "BYBLOS_DIGITAL_SHOP": "Byblos Digital Shop",
+      "JOUNIEH_PAY_HUB": "Jounieh Pay Hub",
+      "ZAHLEH_TECH_POINT": "Zahleh Tech Point",
+      "TYRE_POS_CENTER": "Tyre POS Center",
+      "BAALBEK_TECH_HUB": "Baalbek Tech Hub",
+      "DAMOUR_PAY_POINT": "Damour Pay Point"
+    }
+  }
+}

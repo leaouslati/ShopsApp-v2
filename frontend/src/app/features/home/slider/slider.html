@@ -1,0 +1,13 @@
+<div class="slider-container">
+    <button class="previous" (click)="previous()">&#8592;</button>
+    <div class="slides">
+        @for (slide of visibleSlides(); track slide.position) {
+            <div class="slide" [class.active]="slide.position === 'active'"
+                 [class.left]="slide.position === 'left'"
+                 [class.right]="slide.position === 'right'">
+                <img [src]="slide.product.image_path" [alt]="slide.product.title">
+            </div>
+        }
+    </div>
+    <button class="next" (click)="next()">&#8594;</button>
+</div>

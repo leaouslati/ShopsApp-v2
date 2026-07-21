@@ -1,0 +1,133 @@
+:host {
+    display: block;
+}
+
+.slider-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    height: 220px;
+}
+
+.slides {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.slide {
+    flex: 0 0 33.333%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.35s ease, transform 0.35s ease, filter 0.35s ease;
+}
+
+.slide.active {
+    opacity: 1;
+    transform: scale(1);
+    filter: none;
+    z-index: 2;
+}
+
+.slide.left,
+.slide.right {
+    opacity: 0.45;
+    transform: scale(0.82);
+    filter: blur(1.5px);
+    z-index: 1;
+}
+
+.slide img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: contain;
+}
+
+
+.previous,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #2C3E50;
+    color: #ffffff;
+    border: none;
+    width: 42px;
+    height: 42px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.previous {
+    left: 16px;
+}
+
+.next {
+    right: 16px;
+}
+
+/* ========================
+   RESPONSIVE
+   ======================== */
+@media (max-width: 768px) {
+    .slider-container {
+        height: 150px;
+    }
+
+    .slides {
+        padding: 0 2.5rem;
+    }
+
+    .slide img {
+        width: 100%;
+        max-height: 120px;
+    }
+
+    .previous,
+    .next {
+        width: 36px;
+        height: 36px;
+        font-size: 0.95rem;
+    }
+
+    .previous {
+        left: 10px;
+    }
+
+    .next {
+        right: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .slider-container {
+        height: 120px;
+    }
+
+    .slides {
+        justify-content: center;
+        padding: 0 3rem;
+    }
+
+    .slide.left,
+    .slide.right {
+        display: none;
+    }
+
+    .slide.active {
+        flex: 0 0 100%;
+    }
+
+    .slide img {
+        width: 100%;
+        max-height: 100px;
+    }
+}

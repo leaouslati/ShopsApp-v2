@@ -1,0 +1,9 @@
+<div class="map-wrapper">
+    <div class="contact-map" id="map"></div>
+    <button class="map-reset-btn" (click)="resetMap()">↺</button>
+</div>
+<div class="contact-stores">
+    @for (store of stores; track store.key) {
+        <div class="store-item" (click)="flyToStore(store)">{{ store.key | translate }}</div>
+    }
+</div>

@@ -1,0 +1,18 @@
+<app-nav-bar [title]="'NAVBAR.PRODUCT_DETAIL'" />
+@if(productService.currentProduct()){
+<div class="detail-container">
+    <a routerLink="/" class="back-btn">← {{ 'PRODUCT_DETAIL.BACK' | translate }}</a>
+
+    <div class="product-detail-wrapper">
+        <div class="detail-image">
+            <img [src]="productService.currentProduct()?.image_path"
+                [alt]="productService.currentProduct()?.title">
+        </div>
+        <div class="detail-info">
+            <h1>{{productService.currentProduct()?.title}}</h1>
+            <p>{{productService.currentProduct()?.description}}</p>
+            <p>{{ 'PRODUCT_DETAIL.PRICE' | translate }} ${{productService.currentProduct()?.price}}</p>
+        </div>
+    </div>
+</div>
+}

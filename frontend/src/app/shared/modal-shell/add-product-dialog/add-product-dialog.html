@@ -1,0 +1,64 @@
+<div class="dialog-header">
+    <h2 mat-dialog-title>{{ 'ADD_PRODUCT.TITLE' | translate }}</h2>
+    <button class="close-btn" (click)="dialogRef.close()">✕</button>
+</div>
+<mat-dialog-content>
+    <form [formGroup]="addProductForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="title">{{ 'ADD_PRODUCT.TITLE_LABEL' | translate }}</label>
+            <input type="text" id="title" formControlName="title"
+                [placeholder]="'ADD_PRODUCT.TITLE_PLACEHOLDER' | translate"
+                [class.input-error]="addProductForm.controls.title.invalid && addProductForm.controls.title.touched">
+            @if(addProductForm.controls.title.touched && addProductForm.controls.title.errors?.['required']){
+            <span class="error">{{ 'ADD_PRODUCT.TITLE_REQUIRED' | translate }}</span>
+            }
+        </div>
+
+        <div class="form-group">
+            <label for="description">{{ 'ADD_PRODUCT.DESCRIPTION_LABEL' | translate }}</label>
+            <textarea formControlName="description" id="description"
+                [placeholder]="'ADD_PRODUCT.DESCRIPTION_PLACEHOLDER' | translate"
+                [class.input-error]="addProductForm.controls.description.invalid && addProductForm.controls.description.touched"></textarea>
+            @if(addProductForm.controls.description.touched && addProductForm.controls.description.errors?.['required']){
+            <span class="error">{{ 'ADD_PRODUCT.DESCRIPTION_REQUIRED' | translate }}</span>
+            }
+        </div>
+
+        <div class="form-group">
+            <label for="price">{{ 'ADD_PRODUCT.PRICE_LABEL' | translate }}</label>
+            <input type="number" formControlName="price" id="price"
+                placeholder="0.00"
+                [class.input-error]="addProductForm.controls.price.invalid && addProductForm.controls.price.touched">
+            @if(addProductForm.controls.price.touched && addProductForm.controls.price.errors?.['required']){
+            <span class="error">{{ 'ADD_PRODUCT.PRICE_REQUIRED' | translate }}</span>
+            }
+            @if(addProductForm.controls.price.touched && addProductForm.controls.price.errors?.['min']){
+            <span class="error">{{ 'ADD_PRODUCT.PRICE_NEGATIVE' | translate }}</span>
+            }
+        </div>
+
+        <div class="form-group">
+            <label>{{ 'ADD_PRODUCT.IMAGE_LABEL' | translate }}</label>
+            <label class="file-upload-area" for="image">
+                <span class="file-upload-text">
+                    @if (selectedImage()) {
+                        {{ selectedImage()!.name }}
+                    } @else {
+                        {{ 'ADD_PRODUCT.IMAGE_CHOOSE' | translate }}
+                    }
+                </span>
+            </label>
+            <input type="file" id="image" accept="image/*" class="file-input-hidden" (change)="onFileSelected($event)">
+            @if (imageError()) {
+            <span class="error">{{ imageError() }}</span>
+            }
+        </div>
+
+        @if (addProductError()) {
+        <p class="error">{{ addProductError() }}</p>
+        }
+        <button type="submit" class="btn" [disabled]="isLoading()">
+          {{ isLoading() ? ('ADD_PRODUCT.SUBMITTING' | translate) : ('ADD_PRODUCT.SUBMIT' | translate) }}
+        </button>
+    </form>
+</mat-dialog-content>

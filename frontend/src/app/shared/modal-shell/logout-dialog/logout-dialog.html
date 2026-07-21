@@ -1,0 +1,14 @@
+<div class="dialog-header">
+  <h2 mat-dialog-title>{{ 'LOGOUT.TITLE' | translate }}</h2>
+</div>
+
+<mat-dialog-content>
+  <p class="confirm-text">{{ 'LOGOUT.CONFIRM_TEXT' | translate }}</p>
+
+  <div class="dialog-buttons">
+    <button class="btn btn-cancel" [disabled]="isLoading()" (click)="dialogRef.close()">{{ 'LOGOUT.CANCEL' | translate }}</button>
+    <button class="btn btn-delete" [disabled]="isLoading()" (click)="onLogout()">
+      {{ isLoading() ? ('LOGOUT.SUBMITTING' | translate) : ('LOGOUT.SUBMIT' | translate) }}
+    </button>
+  </div>
+</mat-dialog-content>

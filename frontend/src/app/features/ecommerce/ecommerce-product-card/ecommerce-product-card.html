@@ -1,0 +1,15 @@
+<div class="ecomm-card">
+    <img [src]="product().image_path" [alt]="product().title">
+    <p>
+        {{product().title}} / $
+        {{product().price}}
+    </p>
+    <div class="qty-controls">
+        <input type="number" class="qty-input" [formControl]="quantityControl" min="0">
+        <div class="qty-btn-group">
+            <span class="qty-plus" (click)="increment()">+</span>
+            <span class="qty-minus" (click)="decrement()">−</span>
+        </div>
+    </div>
+    <button class="add-to-order" (click)="toggleChecked()" [class.checked]="checked()">✔</button>
+</div>

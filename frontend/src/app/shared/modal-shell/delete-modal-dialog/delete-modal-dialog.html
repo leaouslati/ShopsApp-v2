@@ -1,0 +1,20 @@
+<div class="dialog-header">
+  <h2 mat-dialog-title>{{ 'DELETE_PRODUCT.TITLE' | translate }}</h2>
+</div>
+
+<mat-dialog-content>
+  <p class="confirm-text">
+    {{ 'DELETE_PRODUCT.CONFIRM_BEFORE' | translate }}<strong>{{ product.title }}</strong>{{ 'DELETE_PRODUCT.CONFIRM_AFTER' | translate }}
+  </p>
+
+  @if (deleteError()) {
+    <p class="error">{{ deleteError() }}</p>
+  }
+
+  <div class="dialog-buttons">
+    <button class="btn btn-cancel" [disabled]="isLoading()" (click)="dialogRef.close()">{{ 'DELETE_PRODUCT.CANCEL' | translate }}</button>
+    <button class="btn btn-delete" [disabled]="isLoading()" (click)="onDelete()">
+      {{ isLoading() ? ('DELETE_PRODUCT.SUBMITTING' | translate) : ('DELETE_PRODUCT.SUBMIT' | translate) }}
+    </button>
+  </div>
+</mat-dialog-content>
