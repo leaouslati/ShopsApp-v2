@@ -95,11 +95,11 @@ This is **Version 2** of ShopsApp, part of a multi-version project. **Version 1*
 
 ### Home Page
 
-Guest view (products grid, store locator map, contact/follow-us sections):
+Guest view:
 
 ![Home page - guest view](screenshots/home-page-guest.png)
 
-Admin view — note the add/edit/delete controls on each product card:
+Admin view:
 
 ![Home page - admin view](screenshots/home-page-admin.png)
 
