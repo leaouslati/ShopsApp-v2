@@ -91,14 +91,36 @@ The app will be available at `http://localhost:4200`.
 
 ### Home Page
 
+Guest view (products grid, store locator map, contact/follow-us sections):
+
+![Home page - guest view](screenshots/home-page-guest.png)
+
+Admin view — note the add/edit/delete controls on each product card:
+
+![Home page - admin view](screenshots/home-page-admin.png)
+
 ### Product Detail
+
+![Product detail page](screenshots/product-detail.png)
 
 ### Ecommerce / Order Page
 
-### Store Locator Map
+![Ecommerce order page](screenshots/ecommerce-order-page.png)
 
 ### Login / Register Modals
 
+![Login modal](screenshots/login-modal.png)
+
+![Register modal](screenshots/register-modal.png)
+
 ### Admin — Add / Edit / Delete Product
 
+![Add product modal](screenshots/admin-add-product-modal.png)
+
+![Edit product modal](screenshots/admin-edit-product-modal.png)
+
+![Delete product confirmation modal](screenshots/admin-delete-product-modal.png)
+
 ### Arabic (RTL) Layout
+
+![Arabic RTL layout](screenshots/arabic-rtl-layout.png)
