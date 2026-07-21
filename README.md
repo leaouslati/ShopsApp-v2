@@ -91,11 +91,11 @@ The app will be available at `http://localhost:4200`.
 
 ### Home Page
 
-Guest view (products grid, store locator map, contact/follow-us sections):
+Guest view:
 
 ![Home page - guest view](screenshots/home-page-guest.png)
 
-Admin view — note the add/edit/delete controls on each product card:
+Admin view:
 
 ![Home page - admin view](screenshots/home-page-admin.png)
 
